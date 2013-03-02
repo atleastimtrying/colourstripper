@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A funky bookmarklet!">
+  <title>Funky CSS Scanner</title>
+  <style>
+    p{
+      font-family:sans-serif;
+    }
+    a{
+      display: inline-block;
+      padding: 23px;
+      border:1px solid #ccc;
+      font-size: 64px;
+      font-family: sans-serif;
+      color: #ccc;
+      text-shadow: 1px 1px 1px white;
+      border-radius: 4px;
+      background:#eee;
+      box-shadow: 3px 3px 3px #222;
+      text-decoration: none;
+    }
+    a:hover{
+      color:#999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Colour stripper bookmarklet</h1>
+  <p>Just drag the link below to your bookmarks bar.</p>
+  <a href="javascript:(function(){ var prev = document.getElementsByClassName('colorstripper'); if(prev.length === 0){var a = document.createElement('script'); a.setAttribute('src', 'colourstripper.js'); var h = document.getElementsByTagName('head')[0]; h.appendChild(a);}else{prev[0].style.display = 'block';} }());">bookmarklet</a>
+</body>
+</html>

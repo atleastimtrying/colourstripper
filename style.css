@@ -1,0 +1,22 @@
+div.pandr-colourstripper{
+  padding:24px;
+  background:rgb(25,20,20);
+  top:0;
+  border-bottom-right-radius:2px;
+}
+div.pandr-colourstripper ul{
+  list-style:none;
+}
+div.pandr-colourstripper li{
+  height:44px;
+  width:44px;
+  margin:2px;
+  display:inline-block;
+  vertical-align:top; 
+}
+div.pandr-colourstripper p{
+  margin-bottom:0;
+  color:white;
+  font-family:sans-serif;
+  font-size:16px;
+}
