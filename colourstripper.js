@@ -48,15 +48,19 @@
   for(var i = 0, l = colours.length; i < l; ++i){
     palette += "<li style='background:" + colours[i] + ";'></li>";
   }
-  palette += "</ul><p id='pandr-value'>Hover a colour!<br>&nbsp;</p></div>"
+  palette += "</ul><p id='pandr-value'>Hover a colour!<br>&nbsp;</p></div>";
 
   
   document.body.innerHTML = palette + document.body.innerHTML;
 
-  // $('li').mouseover(function(){
-  //   var bgc = $(this).css('backgroundColor');
-  //   $('#pandr-value').html( bgc + getHex(bgc) );
-  // });
+  var lis = document.querySelectorAll('.pandr-colourstripper li');
+
+  for(var i = 0, l = lis.length; i < l; ++i){
+    lis[i].onmouseover = function(){
+      var bgc = this.style.backgroundColor;
+      document.querySelector('#pandr-value').innerHTML = bgc + getHex(bgc);
+    };
+  }
 
   var link = document.createElement('link');
   link.setAttribute('href', 'http://atleastimtrying.github.com/colourstripper/style.css');
