@@ -30,11 +30,11 @@
   };
 
   var rgbToHex = function(rgbString){
-    rgbarray = rgbString.split('rgb(')[1].split(')')[0].split(',');
-    result = '#';
+    var rgbarray = rgbString.split('rgb(')[1].split(')')[0].split(',');
+    var result = '#';
     for(var i = 0, l = rgbarray.length; i < l; ++i){
-      stringValue = rgbarray[i];
-      hex =  parseInt(valAsString).toString(16);
+      var stringValue = rgbarray[i];
+      var hex =  parseInt(stringValue).toString(16);
       if(hex.length === 1){
         result += '0';
       }
