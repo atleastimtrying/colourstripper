@@ -2,20 +2,20 @@
   var arr = [];
   for(var i = 0, l = document.styleSheets.length; i < l; ++i){
     var sheet = document.styleSheets[i];
-    for(var j = 0, m = sheet.cssRules.length; j < m; ++j){
-      var rule = sheet.cssRules[j];
-      arr.push(rule.style.color);
-      arr.push(rule.style.backgroundColor);
+    if(sheet.cssRules){
+      for(var j = 0, m = sheet.cssRules.length; j < m; ++j){
+        var rule = sheet.cssRules[j];
+        arr.push(rule.style.color);
+        arr.push(rule.style.backgroundColor);
+      }
     }
   } 
   
   var colours = [];
   for(var i = 0, l = arr.length; i < l; ++i){
     colour = arr[i].toString();
-    if(this.length){
-      if(colours.indexOf(colour) === -1){
-        colours.push(colour);
-      }
+    if(colour.length && colours.indexOf(colour) === -1){
+      colours.push(colour);
     }
   }
 
