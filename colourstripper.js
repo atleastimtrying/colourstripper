@@ -54,13 +54,14 @@
   document.body.innerHTML = palette + document.body.innerHTML;
 
   var lis = document.querySelectorAll('.pandr-colourstripper li');
-
-  for(var i = 0, l = lis.length; i < l; ++i){
-    lis[i].onmouseover = function(){
-      debugger;
-      var colour = this.style.backgroundColor;
-      document.querySelector('#pandr-value').innerHTML = colour + getHex(colour);
-    };
+  if(lis){
+    for(var i = 0, l = lis.length; i < l; ++i){
+      lis[i].onmouseover = function(){
+        debugger;
+        var colour = this.style.backgroundColor;
+        document.querySelector('#pandr-value').innerHTML = colour + getHex(colour);
+      };
+    }
   }
 
   var link = document.createElement('link');
