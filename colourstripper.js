@@ -59,7 +59,9 @@
       lis[i].onmouseover = function(){
         debugger;
         var colour = this.style.backgroundColor;
-        document.querySelector('#pandr-value').innerHTML = colour + getHex(colour);
+        if(colour){
+          document.querySelector('#pandr-value').innerHTML = colour + getHex(colour);
+        }
       };
     }
   }
