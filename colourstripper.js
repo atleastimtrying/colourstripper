@@ -21,7 +21,7 @@
 
   var getHex = function(colourString){
     var result = '';
-    if(colourString.indexOf('rgba') !== 0){
+    if(colourString.indexOf('rgb') !== -1){
       result = '<br>' + rgbToHex(colourString);
     }else{
       result = '<br>&nbsp;';
@@ -57,7 +57,6 @@
   if(lis){
     for(var i = 0, l = lis.length; i < l; ++i){
       lis[i].onmouseover = function(){
-        debugger;
         var colour = this.style.backgroundColor;
         if(colour){
           document.querySelector('#pandr-value').innerHTML = colour + getHex(colour);
