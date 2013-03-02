@@ -59,7 +59,7 @@
   // });
 
   var link = document.createElement('link');
-  link.setAttribute('href', 'style.css');
+  link.setAttribute('href', 'https://raw.github.com/atleastimtrying/colourstripper/master/style.css');
   link.setAttribute('rel', 'stylesheet');
   var head = document.getElementsByTagName('head')[0];
   head.appendChild(link);
