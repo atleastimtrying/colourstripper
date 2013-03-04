@@ -20,6 +20,7 @@
     var head = document.getElementsByTagName('head')[0];
     head.appendChild(link);
   };
+
   var rgbToHex = function(rgbString){
     var rgbarray = rgbString.split('rgb(')[1].split(')')[0].split(',');
     var result = '#';
@@ -50,7 +51,7 @@
     }
   });
 
-  var palette = "<div class='pandr-colourstripper'><ul style='list-style:none;'>";
+  var palette = "<div class='pandr-colourstripper'><a id='close' href='#'>X</a><ul style='list-style:none;'>";
   var colours = colours.sort();
   arrEach(colours, function(colour){
     palette += "<li style='background:" + colour + ";'></li>";
@@ -71,4 +72,10 @@
     });
   }
   addCSS();
+
+
+  var closeButton = document.getElementById('close');
+  closeButton.onclick = function(e){ 
+    document.querySelector('.pandr-colourstripper').remove();
+  };
 }());

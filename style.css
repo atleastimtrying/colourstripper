@@ -3,6 +3,7 @@ div.pandr-colourstripper{
   background:rgb(25,20,20);
   top:0;
   border-bottom-right-radius:2px;
+  position: relative;
 }
 div.pandr-colourstripper ul{
   list-style:none;
@@ -19,4 +20,17 @@ div.pandr-colourstripper p{
   color:white;
   font-family:sans-serif;
   font-size:16px;
+}
+div.pandr-colourstripper a#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  color: white;
+  background: rgb(25,20,20);
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-shadow: none;
 }
